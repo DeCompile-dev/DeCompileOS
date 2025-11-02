@@ -1,7 +1,18 @@
-#ifndef REG_H
-#define REG_H
+#ifndef REGISTER_H
+#define REGISTER_H
 
-void load_cr3(unsigned long cr3);
-void read_cr3(unsigned long* cr3);
+#include "stdint.h"
 
-#endif REG_H
+// CR3 (Adres Paging Structure - PML4)
+void write_cr3(uint64_t cr3);
+uint64_t read_cr3();
+
+// CR0 (Control Register 0)
+void write_cr0(uint64_t cr0);
+uint64_t read_cr0();
+
+// CR4 (Control Register 4)
+void write_cr4(uint64_t cr4);
+uint64_t read_cr4();
+
+#endif // REGISTER_H
