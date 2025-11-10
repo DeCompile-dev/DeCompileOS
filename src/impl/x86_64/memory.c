@@ -50,7 +50,7 @@ void map_page(uint64_t vaddr, uint64_t paddr, uint64_t flags) {
     uint64_t pt_index   = (vaddr >> 12) & 0x1FF;
 
     page_entry_t *pdpt, *pd, *pt;
-    page_entry_t *pml4_entry = &pml4_table[pml4_index];
+    page_entry_t *pml4_entry = (page_entry_t *) &pml4_table[pml4_index];
 
     pdpt = get_next_table(pml4_entry); 
     if (pdpt == NULL) return; 

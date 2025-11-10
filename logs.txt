@@ -1,0 +1,13 @@
+root@ca64fed9dd41:~/env# make build-x86_64
+  [CC]  src/impl/kernel/main.c
+  [CC]  src/impl/kernel/main_lib.c
+  [CC]  src/impl/x86_64/keyboard_driver.c
+  [CC]  src/impl/x86_64/memory.c
+  [CC]  src/impl/x86_64/print.c
+  [CC]  src/impl/x86_64/register.c
+  [AS]  src/impl/x86_64/boot/header.asm
+  [AS]  src/impl/x86_64/boot/main.asm
+  [AS]  src/impl/x86_64/boot/main64.asm
+  [LD]  dist/x86_64/kernel.bin
+make: *** [Makefile:33: build-x86_64] Error 1
+root@ca64fed9dd41:~/env#
