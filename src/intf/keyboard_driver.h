@@ -23,5 +23,5 @@ void driver_keyboard_init();
  * This function is meant to be called from the assembly interrupt stub.
  */
 void keyboard_interrupt_handler();
-
+extern int get_char_from_keyboard(char *out_char);
 #endif // KEYBOARD_DRIVER_H
