@@ -6,7 +6,7 @@ const static size_t NUM_ROWS = 25;
 struct Char {
     uint8_t character;
     uint8_t color;
-};
+};// {3} estereqq_command_prefix = "ester_eqq";
 
 struct Char* buffer = (struct Char*) 0xb8000;
 size_t col = 0;

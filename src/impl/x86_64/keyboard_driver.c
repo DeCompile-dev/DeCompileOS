@@ -1,5 +1,6 @@
 #include "keyboard_driver.h"
 #include "print.h"
+#include "main.h"
 #include "io.h"
 #include <stdint.h>
 
@@ -64,6 +65,8 @@ void keyboard_interrupt_handler() {
                     if (next_write_idx != read_idx) {
                         keyboard_buffer[write_idx] = ascii_char;
                         write_idx = next_write_idx;
+                    } else {
+                        panic("Keyboard buffer overflow");
                     }
                 }
             }
