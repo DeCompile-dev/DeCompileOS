@@ -2,6 +2,20 @@
 
 Build: docker build buildenv -t decompileos
 
+# Features
+
+- 64 Bit Long mode support
+- Simple Memory handler
+
+# Commands
+- help (lists commands)
+- version (prints ver and build date)
+- echo [string]
+- test (Runs a small test app)
+- game_engine_test (simple ascii game demo)
+- panic_test
+and a easter egg! (find it yourself lol!)
+
 # Running Docker - Running System
 
      Linux or MacOS: docker run --rm -it -v "$(pwd)":/root/env decompileos
