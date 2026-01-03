@@ -8,13 +8,18 @@ Build: docker build buildenv -t decompileos
 - Simple Memory handler
 
 # Commands
-- help (lists commands)
-- version (prints ver and build date)
-- echo [string]
-- test (Runs a small test app)
-- game_engine_test (simple ascii game demo)
-- panic_test
-and a easter egg! (find it yourself lol!)
+Listed by help
+- help — prints the command list
+- version — prints version info + build date
+- test — runs the “test application” (calls the starting module)
+- echo [text] — prints back whatever you type after echo 
+- clear — clears the screen
+- cmd_debug — triggers the main module’s debug entry (main_debug)
+
+“Developer commands” (also shown in help)
+- game_engine_test — initializes the (very simple) “game engine” flag
+- game_2d — prints the ASCII box/line demo (only works after game_engine_test)
+- panic_test — intentionally panics the kernel
 
 # Running Docker - Running System
 
